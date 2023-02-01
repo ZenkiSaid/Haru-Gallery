@@ -130,9 +130,9 @@
     position: absolute;
     color: #fff;
     margin: 0;
-    top: 40px;
-    right: 40px;
-    font-size: 4rem;
+    top: 5%;
+    right: 10%;
+    font-size: 3rem;
     cursor: pointer;
   }
   
@@ -154,6 +154,10 @@
     .end {
       font-size: .9rem;
       padding: 1.2rem .6rem .6rem 1.2rem;
+    }
+
+    .close {
+      right: 1%;
     }
   }
   
@@ -188,5 +192,10 @@
     .img-show {
       min-height: auto;
       max-width: 98%;
+    }
+
+    .close {
+      font-size: 2rem;
+      top: 1%;
     }
   }
