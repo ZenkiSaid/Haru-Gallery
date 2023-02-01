@@ -1,0 +1,150 @@
+@font-face {
+    font-family: chewyfont;
+    src: url(../fonts/chewy.ttf);
+  }
+  
+  @font-face {
+    font-family: sofiasansfont;
+    src: url(../fonts/ofiaSans.ttf);
+  }
+  
+  body {
+    background: url(../img/wood.jpg);
+    background-size: cover;
+    font-family: sofiasansfont;
+    cursor: default;
+  }
+  
+  .end-container {
+    position: absolute;
+    height: 920px;
+    width: 670px;
+    top: calc(50% - 460px);
+    left: calc(50% - 335px);
+  }
+  
+  .end {
+    background: no-repeat url(../img/end.png);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about {
+    text-align: justify;
+    font-size: 1.8rem;
+    color: #ffffff8c;
+    position: absolute;
+    width: 50%;
+    top: 15%;
+    left: 20%;
+  }
+
+  .copy {
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff8c;
+    position: absolute;
+    width: 50%;
+    top: 85%;
+    left: 20%;
+  }
+  
+  .social-media {
+    width: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    bottom: 20%;
+    left: 20%;
+  }
+  
+  .social-media img {
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .front {
+    cursor: pointer;
+    font-family: chewyfont;
+    text-decoration: none;
+    color: white;
+    background-color: #efb810;
+    position: absolute;
+    font-size: 1.2rem;
+    top: 92.5%;
+    right: calc(89.4% - .4rem);
+    padding: 1.5rem .8rem .8rem .8rem;
+    -moz-border-radius: 0 100% 0 0;
+    -webkit-border-radius: 0 100% 0 0;
+    border-radius: 0 80% 0 0;
+    border: black 2px solid;
+    transition: color .3s ease, transform .3s;
+  }
+  
+  .front:hover {
+    color: black;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 900px), (max-height: 950px) {
+    .end-container {
+      height: 800px;
+      width: 580px;
+      top: calc(50% - 400px);
+      left: calc(50% - 290px);
+    }
+  
+    .about {
+      font-size: 1.5rem;
+    }
+  
+    .front {
+      font-size: .9rem;
+      padding: 1.2rem .6rem .6rem .6rem;
+      right: calc(90% - .4rem);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .end-container {
+      height: 70%;
+      width: 90%;
+      top: calc(50% - 35%);
+      left: calc(50% - 45%);
+    }
+  
+    .about {
+      font-size: 1.3rem;
+      width: 70%;
+      top: 10%;
+      left: 15%;
+    }
+  
+    .copy {
+      text-align: center;
+      font-size: .9rem;
+      width: 70%;
+      top: 85%;
+      left: 15%;
+    }
+    
+    .social-media {
+      width: 70%;
+      bottom: 20%;
+      left: 15%;
+    }
+    
+    .social-media img {
+      height: 30px;
+    }
+
+    .front {
+      font-size: .6rem;
+      padding: 1rem .4rem .4rem .4rem;
+      right: calc(90% - .4rem);
+    }
+  }

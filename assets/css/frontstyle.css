@@ -1,0 +1,192 @@
+@font-face {
+    font-family: chewyfont;
+    src: url(../fonts/chewy.ttf);
+  }
+  
+  body {
+    background: url(../img/wood.jpg);
+    background-size: cover;
+    font-family: chewyfont;
+  }
+  
+  .front-container {
+    position: absolute;
+    height: 920px;
+    width: 670px;
+    top: calc(50% - 460px);
+    left: calc(50% - 335px);
+  }
+  
+  .front {
+    background: no-repeat url(../img/front.png);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+  }
+  
+  .frontimg {
+    position: absolute;
+    height: 20%;
+    width: 50%;
+    top: 20%;
+    left: calc(30% - .6em);
+    cursor: zoom-in;
+    border: 10px solid #ffffffc2;
+    border-radius: 25px;
+    transition: border-radius .3s ease, transform .3s;
+  }
+  
+  .frontimg:hover {
+    transform: scale(1.1);
+    border-radius: 0;
+  }
+  
+  .open {
+    text-decoration: none;
+    --b: 8px;
+    --s: .45em;
+    --color: #ffffffc2;
+  
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .2s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+  
+    font-size: 1.9em;
+    position: absolute;
+    top: 50%;
+    left: calc(35% + 2em);
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .open:hover,
+  .open:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  .open:active {
+    background: var(--color);
+    color: #fff;
+  }
+  
+  .end {
+    text-decoration: none;
+    color: white;
+    background-color: #efb810;
+    position: absolute;
+    font-size: 1.2rem;
+    top: 92.5%;
+    left: calc(90% - .4rem);
+    padding: 1.5rem .8rem .8rem 1.5rem;
+    -moz-border-radius: 0 100% 0 0;
+    -webkit-border-radius: 0 100% 0 0;
+    border-radius: 80% 0 0 0;
+    border: black 2px solid;
+    transition: color .3s ease, transform .3s;
+  }
+  
+  .end:hover {
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .lightbox {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform .2s ease;
+  }
+
+  .open-box {
+    transform: scale(1);
+  }
+  
+  .img-show {
+    min-height: 80%;
+    max-width: 98%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .close {
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    top: 40px;
+    right: 40px;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 900px), (max-height: 950px) {
+    .front-container {
+      height: 800px;
+      width: 580px;
+      top: calc(50% - 400px);
+      left: calc(50% - 290px);
+    }
+  
+    .open {
+      font-size: 1.5em;
+      left: calc(46%);
+      --b: 4px;
+      --s: .25em;
+    }
+  
+    .end {
+      font-size: .9rem;
+      padding: 1.2rem .6rem .6rem 1.2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .front-container {
+      height: 70%;
+      width: 90%;
+      top: calc(50% - 35%);
+      left: calc(50% - 45%);
+    }
+
+    .frontimg {
+    border: 5px solid #ffffffc2;
+    }
+  
+    .open {
+      font-size: 1em;
+      left: calc(46%);
+      --b: 4px;
+      --s: .25em;
+    }
+  
+    .end {
+      font-size: .6rem;
+      padding: 1rem .4rem .4rem 1rem;
+    }
+
+    .lightbox {
+      transition: transform 0s ease;
+      }
+  
+    .img-show {
+      min-height: auto;
+      max-width: 98%;
+    }
+  }
